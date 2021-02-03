@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="static/docs/css/bootstrap.css" rel="stylesheet">
-    <link href="static/docs/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="static/docs/css/docs.css" rel="stylesheet">
-    <link href="static/docs/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,24 +22,27 @@
 
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
+    <div style="height: 40px">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Lansing Landing Page</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="">
-                <a href="./index.html">Home</a>
-              </li>
-              </ul>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index.html">Lansing Landing Page</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
           </div>
         </div>
-      </div>
+      </nav> 
     </div>
 
 <!-- Subhead
@@ -55,19 +58,19 @@
     <!-- Docs nav
     ================================================== -->
     <div class="row">
-      <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
+      <div class="col-xs-3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav list-group">
 
-          <li><a href="#credits"><i class="icon-chevron-right"></i> Sources and Credits</a></li>
-          <li><a href="#requirements"><i class="icon-chevron-right"></i> Requirements</a></li>
-          <li><a href="#setup"><i class="icon-chevron-right"></i> Setup</a></li>
-          <li><a href="#html"><i class="icon-chevron-right"></i> HTML Structure</a></li>
-          <li><a href="#css"><i class="icon-chevron-right"></i> CSS Structure</a></li>
-          <li><a href="#js"><i class="icon-chevron-right"></i> JavaScript Structure</a></li>
+          <li><a href="#credits"><i class="glyphicon glyphicon-chevron-right"></i> Sources and Credits</a></li>
+          <li><a href="#requirements"><i class="glyphicon glyphicon-chevron-right"></i> Requirements</a></li>
+          <li><a href="#setup"><i class="glyphicon glyphicon-chevron-right"></i> Setup</a></li>
+          <li><a href="#html"><i class="glyphicon glyphicon-chevron-right"></i> HTML Structure</a></li>
+          <li><a href="#css"><i class="glyphicon glyphicon-chevron-right"></i> CSS Structure</a></li>
+          <li><a href="#js"><i class="glyphicon glyphicon-chevron-right"></i> JavaScript Structure</a></li>
 
         </ul>
       </div>
-      <div class="span9">
+      <div class="col-xs-9">
 
         <!-- Credits
         ================================================== -->
@@ -470,31 +473,29 @@ Each grid-x unit has 10px of padding on the right and left side that, when coupl
     </footer>
 
 
-
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="static/docs/js/jquery.js"></script>
-    <script src="static/docs/js/bootstrap-transition.js"></script>
-    <script src="static/docs/js/bootstrap-alert.js"></script>
-    <script src="static/docs/js/bootstrap-modal.js"></script>
-    <script src="static/docs/js/bootstrap-dropdown.js"></script>
-    <script src="static/docs/js/bootstrap-scrollspy.js"></script>
-    <script src="static/docs/js/bootstrap-tab.js"></script>
-    <script src="static/docs/js/bootstrap-tooltip.js"></script>
-    <script src="static/docs/js/bootstrap-popover.js"></script>
-    <script src="static/docs/js/bootstrap-button.js"></script>
-    <script src="static/docs/js/bootstrap-collapse.js"></script>
-    <script src="static/docs/js/bootstrap-carousel.js"></script>
-    <script src="static/docs/js/bootstrap-typeahead.js"></script>
-    <script src="static/docs/js/bootstrap-affix.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
 
-    <script src="static/docs/js/holder/holder.js"></script>
-    <script src="static/docs/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
 
-    <script src="static/docs/js/application.js"></script>
-
+    <script src="assets/js/application.js"></script>
 
 
   </body>

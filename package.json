@@ -30,6 +30,8 @@
     "sass": "^1.32.5"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
