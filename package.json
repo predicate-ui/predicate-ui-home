@@ -4,8 +4,8 @@
   "description": "Simple workflow starter for building JS apps",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run clean && parcel src/index.html --out-dir development -p 3000",
-    "build": "rimraf ./dist && parcel build src/*.html --out-dir dist --public-url ./",
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
     "clean": "rimraf ./development && rimraf ./.cache"
   },
   "repository": {
