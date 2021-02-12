@@ -1,0 +1,276 @@
+/*
+Theme Name:
+Theme URI: http://www.ansonika.com/presenter/
+Author: Ansonika
+Author URI: http://themeforest.net/user/Ansonika/
+
+CSS STRUCTURE:
+
+1. SITE STRUCTURE and TYPOGRAPHY
+5. MEDIA QUERIES
+
+/*============================================================================================*/
+/* 1.  SITE STRUCTURE and TYPOGRAPHY */
+/*============================================================================================*/
+/* Fonts and Icons */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+/* Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+	bottom:0;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:999; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background-image:url(../img/preload.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+	text-align:center;
+}
+#status img{
+	position:absolute;
+	top:20px;
+	left:23px;
+}
+
+/* Success submit form page */
+#success {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:99; /* makes sure it stays on top */
+}
+#msg{
+	width:400px;
+	height:200px;
+	position:absolute;
+	text-align:center;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	margin:-100px 0 0 -200px; /* is width and height divided by two */
+}
+#msg img{
+	margin-bottom:20px;
+}
+#msg h3{
+	color:#6C3;
+	margin-bottom:0;
+}
+
+/* Structure */
+html, body {
+	height:100%;
+	max-height:100%;
+	-webkit-font-smoothing: antialiased !important;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size:14px;
+	line-height:22px;
+	margin:0;
+	background-color:#fff;
+	color:#2d4050;
+}
+#main-wrapper {
+	height:100%;
+}
+header {
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:99;
+	height:65px;
+	background:#fff;
+
+}
+#logo a {
+	width:150px;
+	height:35px;
+	background:url(../img/logo.png) no-repeat 0 0;
+	text-indent:-9999px;
+	display:block;
+	position:absolute;
+	left:15px;
+	top:15px;
+	z-index:9;
+}
+#header_shadow{
+	position:absolute;
+	left:0;
+	bottom:-5px;
+	width:100%;
+	height:5px;
+	z-index:99;
+	background: url(../img/header_shadow.png) repeat-x 0 0;
+}
+#row-main {
+	margin:0;
+	height:100%;
+}
+#main-img-container {
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	overflow:hidden;
+	margin-left:-20px;
+}
+#main-img {
+	height:100%;
+	width:100%;
+	position:relative;
+}
+#main-img img{
+	height:100%;
+	width:auto;
+}
+#content-row{
+	height:100%;
+	padding-top:60px;
+}
+.box-sidebar{
+	padding:15px 25px 10px 25px;
+	background: #fcfcfc;
+	box-shadow: inset 0 0 0 5px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: inset 0 0 0 5px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: inset 0 0 0 5px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.25);
+	border:1px solid #fff;
+	margin-bottom:20px;
+	color:#2e415c;
+	position:relative;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+#share{
+	background:#f8f8f8 url(../img/colored-line.png) left bottom repeat-x;
+	padding:10px;
+	margin-left:-20px;
+	margin-bottom:30px;
+	text-align:left;
+	position:relative;
+	padding-left:15px;
+}
+
+/* TYPOGRAPHY and links color */
+p {
+	margin-bottom:20px;
+}
+a {
+  color: #006db8;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+a:hover,
+a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	text-transform:uppercase;
+	font-weight:800;
+	margin:0 0 10px 0;
+	padding:0;
+}
+
+
+/* #ie10 BORDER RADIUS FIXED*/
+html[data-useragent*='MSIE 10.0'] input, html[data-useragent*='MSIE 10.0'] .btn.btn-info, html[data-useragent*='MSIE 10.0'] .btn.btn-default, html[data-useragent*='MSIE 10.0'] .panel-default, html[data-useragent*='MSIE 10.0'] .drop-down-container.normal ul li a{
+  border-radius:0;
+}
+
+/*============================================================================================*/
+/* 5.  MEDIA QUERIES */
+/*============================================================================================*/
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+header {position:absolute;}
+#main-img-container {
+	position:relative;
+	overflow:hidden;
+	top:65px;
+	height:350px;
+	width:100%;
+	margin-left:0;
+}
+#main-img img{
+	height:auto;
+	width:100%;
+}
+#content-row{
+	height:auto;
+	padding-top:65px;
+}
+
+
+/* From tablet portrait to mobile */
+@media (max-width: 767px) {
+#main-img-container {
+	position:relative;
+	overflow:hidden;
+	top:18px;
+	height:200px;
+	width:100%;
+	margin-left:0;
+}
+#main-img img{
+	height:auto;
+	width:100%;
+}
+#content-row{
+	height:auto;
+	padding-top:0;
+}
+header{
+	height:auto;
+	padding-bottom:12px;
+	position:absolute;
+}
+#share{margin-left:0px; }
+
+.modal {-webkit-overflow-scrolling: touch;}
+
+
+}
+
+/* Mobile portrait */
+/* @media (max-width: 480px) {
+
+} */
